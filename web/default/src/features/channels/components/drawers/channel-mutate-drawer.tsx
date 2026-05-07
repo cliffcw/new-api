@@ -45,7 +45,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
-import { Combobox } from '@/components/ui/combobox'
+import { ComboboxSelect } from '@/components/ui/combobox-select'
 import {
   Form,
   FormControl,
@@ -1144,7 +1144,7 @@ export function ChannelMutateDrawer({
                       <FormItem>
                         <FormLabel>{t('Type *')}</FormLabel>
                         <FormControl>
-                          <Combobox
+                          <ComboboxSelect
                             options={channelTypeOptions}
                             value={String(field.value)}
                             onValueChange={(value) => {
@@ -1156,7 +1156,6 @@ export function ChannelMutateDrawer({
                             placeholder={t('Select channel type')}
                             searchPlaceholder={t('Search channel type...')}
                             emptyText={t('No channel type found.')}
-                            allowCustomValue
                           />
                         </FormControl>
                         <FormMessage />
